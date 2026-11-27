@@ -15,11 +15,11 @@ function updateTableState() {
     const count = dataTableBody.rows.length;
     rowCountEl.textContent = count;
 
-  // 3件以上なら「表示」ボタンを非表示、3件未満なら再表示
+    // 3件以上なら「表示」ボタンを非表示、3件未満なら再表示
     if (count >= 3) {
-    showBtn.style.display = "none";
+        showBtn.style.display = "none";
     } else {
-    showBtn.style.display = "";
+        showBtn.style.display = "inline-block";
     }
 }
 
@@ -60,16 +60,16 @@ addBtn.addEventListener("click", () => {
     deleteBtn.type = "button";
     deleteBtn.textContent = "削除";
 
-  // 「削除」ボタンの処理
+// 「削除」ボタンの処理
     deleteBtn.addEventListener("click", () => {
-    tr.remove();
-    updateTableState();
-    });
+        tr.remove();
+        const count = dataTableBody.rows.length;
+        rowCountEl.textContent = count;
 
-    actionTd.appendChild(deleteBtn);
-    tr.appendChild(contentTd);
-    tr.appendChild(actionTd);
-    dataTableBody.appendChild(tr);
+        if (count < 3) {
+            showBtn.style.display = "inline-block";
+        }
+    });
 
   // 行数が3件を超えたら、古い行（先頭行）から削除する
     while (dataTableBody.rows.length > 3) {
