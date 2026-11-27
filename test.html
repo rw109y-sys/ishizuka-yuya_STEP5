@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="workspace">
+    <div class="controls">
+        <button type="button" id="bgChangeBtn">背景色を変更</button>
+    </div>
+
+    <div class="input-row">
+        <input type="text" id="textInput" placeholder="テキストを入力">
+        <button type="button" id="showBtn">表示</button>
+        <button type="button" id="addBtn">追加</button>
+    </div>
+
+    <div id="displayArea" class="display-area">表示エリア</div>
+
+    <p id="rowCountDisplay" class="row-count">現在の行数: <span id="rowCount">0</span> 件</p>
+
+    <table id="dataTable" class="data-table">
+        <thead>
+        <tr>
+            <th>内容</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="dataTableBody"></tbody>
+    </table>
+    </main>
+
+    <script src="style.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+body {
+    margin: 24px;
+    font-family: sans-serif;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+.controls {
+    margin-bottom: 14px;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+#textInput {
+    width: 220px;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+button {
+    padding: 4px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.display-area {
+    font-size: 20px;
+    margin: 16px 0;
+    min-height: 28px;
+    padding: 4px 8px;
+    max-width: 380px;
+}
+
+.display-area.highlight {
+    background-color: yellow;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.row-count {
+    font-size: 18px;
+    margin: 16px 0 12px;
+}
+
+.data-table {
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #888888;
+    padding: 4px 8px;
+    text-align: left;
+}
